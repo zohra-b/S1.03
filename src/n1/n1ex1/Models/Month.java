@@ -1,4 +1,4 @@
-package n1.n1ex1;
+package n1.n1ex1.Models;
 
 import java.util.Objects;
 
