@@ -1,7 +1,9 @@
-package n3;
+package n3.controllers;
 
-import static n3.PersonsList.*;
-import static n3.View.*;
+import n3.models.Person;
+
+import static n3.models.PersonsList.*;
+import static n3.views.View.*;
 
 public class Controllers {
 

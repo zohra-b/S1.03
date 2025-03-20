@@ -1,4 +1,4 @@
-package n3;
+package n3.models;
 
 import java.util.Comparator;
 

@@ -1,6 +1,6 @@
 package n3;
 
-import static n3.Controllers.run;
+import static n3.controllers.Controllers.run;
 
 
 public class Main {

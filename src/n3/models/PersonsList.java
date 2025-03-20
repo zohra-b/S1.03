@@ -1,17 +1,15 @@
-package n3;
+package n3.models;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-
 
 
 public class PersonsList {
-    static ArrayList<Person> persons = new ArrayList<Person>();
+    public static ArrayList<Person> persons = new ArrayList<Person>();
 
     public static void readingInitialPersonsList() {
-        try(BufferedReader bReader = new BufferedReader(new FileReader("C:/Users/zocat/IdeaProjects/S1.03-Collections/src/n3/persons.csv"))){
+        try(BufferedReader bReader = new BufferedReader(new FileReader("C:/Users/zocat/IdeaProjects/S1.03-Collections/src/n3/assets/persons.csv"))){
             String actualLine;
             while((actualLine= bReader.readLine()) != null){
                 String[] splittedLine = actualLine.split(",");
@@ -30,7 +28,7 @@ public class PersonsList {
         String name = person.getName();
         String surname = person.getSurname();
         String id = person.getId();
-        try (FileWriter writer = new FileWriter("C:/Users/zocat/IdeaProjects/S1.03-Collections/src/n3/persons.csv", true)) {
+        try (FileWriter writer = new FileWriter("C:/Users/zocat/IdeaProjects/S1.03-Collections/src/n3/assets/persons.csv", true)) {
             writer.write(name + "," + surname + ";" + id);
         } catch (IOException e) {
             e.printStackTrace();

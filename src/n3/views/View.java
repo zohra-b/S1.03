@@ -1,8 +1,8 @@
-package n3;
+package n3.views;
+
+import n3.models.Person;
 
 import java.util.Scanner;
-
-import static n3.PersonsList.*;
 
 public class View {
     private static Scanner input = new Scanner(System.in);
