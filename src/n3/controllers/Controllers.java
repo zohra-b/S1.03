@@ -18,8 +18,6 @@ public class Controllers {
     }
 
     public static void runOption(int option) {
-        //int option = getOption();
-
         switch (option) {
             case 1:
                 Person newPerson = getPersonInput();

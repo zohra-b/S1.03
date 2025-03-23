@@ -11,6 +11,9 @@ public class PersonsList {
     public static void readingInitialPersonsList() {
         try(BufferedReader bReader = new BufferedReader(new FileReader("C:/Users/zocat/IdeaProjects/S1.03-Collections/src/n3/assets/persons.csv"))){
             String actualLine;
+
+            bReader.readLine();
+
             while((actualLine= bReader.readLine()) != null){
                 String[] splittedLine = actualLine.split(",");
                 String name = splittedLine[0];
@@ -34,10 +37,6 @@ public class PersonsList {
             e.printStackTrace();
         }
     }
-
-
-
-
 
 
 

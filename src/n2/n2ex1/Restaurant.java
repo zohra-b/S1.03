@@ -34,7 +34,7 @@ public class Restaurant {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (this == null) return false;
+        if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
     Restaurant other = (Restaurant) obj;
     return Objects.equals(name, other.name) && points == other.points;
