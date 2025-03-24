@@ -46,6 +46,7 @@ public class Controllers {
                System.out.println(persons);
                break;
            case 0 :
+               System.out.println("Bye !");
                break;
 
 

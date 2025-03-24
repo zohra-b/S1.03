@@ -5,7 +5,7 @@ import n3.models.Person;
 import java.util.Scanner;
 
 public class View {
-    private static Scanner input = new Scanner(System.in);
+    private static final Scanner SC = new Scanner(System.in);
     private static int option;
 
    public static void printMenu(){
@@ -21,18 +21,18 @@ public class View {
    }
 
    public static int getOption(){
-       option = input.nextInt();
-       input.nextLine();
+       option = SC.nextInt();
+       SC.nextLine();
        return option;
    }
 
    public static Person getPersonInput(){
         System.out.println("Introdueix el nom");
-        String name = input.nextLine();
+        String name = SC.nextLine();
         System.out.println("Introdueix els cognoms");
-        String surname = input.nextLine();
+        String surname = SC.nextLine();
         System.out.println("Introdueix el dni");
-        String id = input.nextLine();
+        String id = SC.nextLine();
         return new Person(name, surname, id);
    }
 

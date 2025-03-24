@@ -20,7 +20,7 @@ public class Month {
         if (obj == null || getClass() != obj.getClass()) return false;
 
         Month month = (Month) obj;
-        return Objects.equals(this.name, ((Month) obj).name);
+        return Objects.equals(this.name, month.name);
     }
 
    @Override
@@ -30,6 +30,6 @@ public class Month {
 
     @Override
     public String toString(){
-        return name;
+        return this.name;
     }
 }

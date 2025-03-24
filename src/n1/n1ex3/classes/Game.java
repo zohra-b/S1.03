@@ -42,9 +42,8 @@ public class Game {
     public static String getRandomCountry(){
         ArrayList<String> countriesList = new ArrayList<>(countries.keySet());
         Random random = new Random();
-        String randomCountry = countriesList.get(random.nextInt(countriesList.size()));
 
-        return randomCountry;
+        return countriesList.get(random.nextInt(countriesList.size()));
     }
 
     public static int play(){
