@@ -28,7 +28,7 @@ public class Main {
 
         List<Integer> reversedList3 = new ArrayList<>();
         ListIterator<Integer> iterator = myList.listIterator(myList.size());
-        while (iterator.hasPrevious()){
+        while (iterator.hasPrevious()) {
 
             reversedList3.add(iterator.previous());
         }

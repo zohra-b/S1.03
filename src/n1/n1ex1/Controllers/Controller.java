@@ -5,10 +5,22 @@ import n1.n1ex1.Models.Month;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
-public class Controllers {
+public class Controller {
+    private static ArrayList<Month> months = new ArrayList<>();
+
     public static void run() {
-        ArrayList<Month> months = new ArrayList<>();
+        initializeMonths();
+        printMonths();
+        insertAugust();
+        HashSet<Month> hashThroughConstructor = convertToHashSet();
+        addJanuary(hashThroughConstructor);
+        iterateHashSet(hashThroughConstructor);
+
+    }
+
+    public static List<Month> initializeMonths() {
         months.add(new Month("January"));
         months.add(new Month("February"));
         months.add(new Month("March"));
@@ -21,32 +33,46 @@ public class Controllers {
         months.add(new Month("November"));
         months.add(new Month("December"));
 
-        months.add(7, new Month("August"));
+        return months;
+    }
 
+    public static void printMonths() {
         for (Month m : months) {
             System.out.println(m);
         }
+    }
 
+    public static void insertAugust() {
+        months.add(7, new Month("August"));
+    }
+
+
+    public static HashSet<Month> convertToHashSet() {
         System.out.println("\nHASH SET CREATED USING CONSTRUCTOR : ");
         HashSet<Month> HashThroughConstructor = new HashSet<>(months);
         for (Month m : HashThroughConstructor) {
             System.out.println(m);
         }
+        return HashThroughConstructor;
+    }
 
+    public static void addJanuary(HashSet<Month> HashThroughConstructor) {
         System.out.println("\nHash set adding january : ");
         HashThroughConstructor.add(new Month("January"));
         for (Month m : HashThroughConstructor) {
             System.out.println(m);
         }
+    }
 
+    public static void iterateHashSet(HashSet<Month> HashThroughConstructor) {
         System.out.println("\nUSING ITERATOR : ");
         Iterator<Month> iterator = HashThroughConstructor.iterator();
         while (iterator.hasNext()) {
             Month month = iterator.next();
             System.out.println(month);
         }
-
-
     }
-    }
+
+}
+
 

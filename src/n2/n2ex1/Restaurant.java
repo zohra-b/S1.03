@@ -3,8 +3,8 @@ package n2.n2ex1;
 import java.util.Objects;
 
 public class Restaurant {
-    String name;
-    int points;
+    private String name;
+    private int points;
 
     public Restaurant(String name, int points){
         this.name = name;

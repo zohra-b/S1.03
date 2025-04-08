@@ -3,8 +3,8 @@ package n2.n2ex2;
 import java.util.Objects;
 
 public class Restaurant implements Comparable<Restaurant> {
-    String name;
-    int points;
+    private String name;
+    private int points;
 
     public Restaurant(String name, int points){
         this.name = name;
@@ -46,7 +46,7 @@ public class Restaurant implements Comparable<Restaurant> {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (this == null) return false;
+        if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;
         Restaurant other = (Restaurant) obj;
         return Objects.equals(name, other.name) && points == other.points;

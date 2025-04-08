@@ -23,6 +23,12 @@ public class View {
    public static int getOption(){
        option = SC.nextInt();
        SC.nextLine();
+       while(option < 0 || option >7){
+           System.out.println("Has d'introduir un numero entre 0 i 7");
+           printMenu();
+           option = SC.nextInt();
+           SC.nextLine();
+       }
        return option;
    }
 
@@ -33,9 +39,15 @@ public class View {
         String surname = SC.nextLine();
         System.out.println("Introdueix el dni");
         String id = SC.nextLine();
+        while (!id.matches("^[a-zA-Z0-9]\\d{7}[A-Za-z]")){
+            System.out.println("Introdueix el 8 números i la lletra del DNI");
+            id = SC.nextLine();
+        }
         return new Person(name, surname, id);
    }
 
-
+    public static void closeScanner(){
+       SC.close();
+    }
 
 }

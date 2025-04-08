@@ -3,7 +3,7 @@ package n2.n2ex1;
 import java.util.HashSet;
 
 public class Main {
-    public static void main(String[] arg){
+    public static void main(String[] args){
     Restaurant rest1 = new Restaurant("Cool Burger", 4);
     Restaurant rest2 = new Restaurant("Cool Burger", 2);
     Restaurant rest3 = new Restaurant("Cool Burger", 4);

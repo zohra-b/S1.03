@@ -7,7 +7,7 @@ public class Person {
     String surname;
     String id;
 
-    public Person(String name, String surname, String id){
+    public Person(String name, String surname, String id) {
         this.name = name;
         this.surname = surname;
         this.id = id;
@@ -16,9 +16,11 @@ public class Person {
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }
+
     public String getId() {
         return id;
     }
@@ -26,15 +28,17 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
-    public void setSurame(String surname) {
+
+    public void setSurName(String surname) {
         this.surname = surname;
     }
+
     public void setId(String id) {
         this.id = id;
     }
 
-    public static Comparator<Person> SORT_BY_NAME = new Comparator<Person>(){
-        public int compare(Person one, Person other){
+    public static Comparator<Person> SORT_BY_NAME = new Comparator<Person>() {
+        public int compare(Person one, Person other) {
             return one.name.compareTo(other.name);
         }
     };
@@ -44,7 +48,7 @@ public class Person {
     public static Comparator<Person> SORT_BY_ID = (one, other) -> one.id.compareTo(other.id);
 
 
-    public String toString(){
+    public String toString() {
         return this.name + " " + this.surname + " " + id + "\n";
     }
 }

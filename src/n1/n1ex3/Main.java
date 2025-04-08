@@ -10,10 +10,11 @@ public class Main {
         int points;
         Scanner input = new Scanner(System.in);
         System.out.println(("Introduce tu nombre"));
+
         player = input.nextLine();
 
-reader();
-points = play();
-writer(player, points);
+        reader();
+        points = play();
+        writer(player, points);
     }
-    }
+}
